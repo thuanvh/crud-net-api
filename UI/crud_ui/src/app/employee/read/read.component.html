@@ -1,0 +1,40 @@
+<div>
+    <table class="table table-success  table-striped">
+    <thead>
+        <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Street</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Created At</th>
+        <th>Action</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let emp of employee">
+        <tr>
+            <td>{{emp.id}}</td>
+            <td>{{emp.firstName}}</td>
+            <td>{{emp.lastName}}</td>
+            <td>{{emp.street}}</td>
+            <td>{{emp.city}}</td>
+            <td>{{emp.state}}</td>
+            <td>{{emp.createAt}}</td>
+            <td>
+                <h5 class="mb-0">
+                    <a routerLink="/delete/{{emp.id}}" class="text-dark text-decoration-none">
+                        <span class="fa fa-trash"></span> 
+                    </a>
+                </h5>
+             
+                <h5 class="mb-0">
+                    <a routerLink="/update/{{emp.id}}" class="text-dark text-decoration-none">
+                <span class="fa fa-edit"></span>
+                        
+                    </a>
+                </h5>
+            </td>
+        </tr>
+    </table>
+    </div>

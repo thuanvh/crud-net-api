@@ -1,0 +1,43 @@
+<p>update works!</p>
+<div class="d-flex justify-content-center mt-10">
+    <div class="col-10">
+         
+        <div >
+            <form  *ngIf="employee" [formGroup]="EmpForm" (ngSubmit)="onSubmit()">
+            <fieldset>
+               
+ 
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">First Name</label>
+                <input type="text" id="firstName"  formControlName="firstName"  class="form-control" [(ngModel)]="employee.firstName" >
+              </div>
+               
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">Last Name</label>
+                <input type="text" id="lastName"  formControlName="lastName"  class="form-control"  [(ngModel)]="employee.lastName">
+              </div>
+ 
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">Street</label>
+                <input type="text" id="street"  formControlName="street"  class="form-control"  [(ngModel)]="employee.street">
+              </div>
+ 
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">City</label>
+                <input type="text" id="city" formControlName="city" class="form-control"  [(ngModel)]="employee.city">
+              </div>
+ 
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">State</label>
+                <input type="text" id="state" formControlName="state"  class="form-control"  [(ngModel)]="employee.state">
+              </div>
+               
+              <input type="hidden" id="id"  formControlName="id"  class="form-control" [(ngModel)]="employee.id" >
+             <div class="d-grid">
+                <button class="btn btn-lg btn-primary mt-3" type="submit">
+                     Submit
+                </button>
+              </div>   
+            </fieldset>
+        </form> 
+    </div> 
